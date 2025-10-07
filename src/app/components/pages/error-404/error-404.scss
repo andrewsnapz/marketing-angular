@@ -5,7 +5,6 @@
 
 .error-404 {
   min-height: 100vh;
-
   background: linear-gradient(#f9fafb 100%, #d2d6db 100%);
   display: flex;
   flex-direction: column;
@@ -15,8 +14,10 @@
     position: relative;
     flex: 1;
     margin: 16px;
-    background-image: url('../../../../../public/abstract-background.webp');
-    object-fit: cover;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)),
+      url('../../../../../public/abstract-background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
     box-shadow: misc.$drop-shadow;
     border-radius: 4px;
 
@@ -37,18 +38,34 @@
       .message {
         @include text.text-base-48;
         font-weight: font.$font-weight-semibold;
-        margin: 0;
+        margin-block-start: 8px;
+        margin-block-end: 20px;
       }
 
       .sub-message {
         @include text.text-base-20;
         color: colors.$text-secondary;
         margin-block-start: 20px;
-        margin-block-end: 0px;
+        margin-block-end: 32px;
       }
 
       .back-home {
         width: 100%;
+      }
+
+      @media (min-width: 768px) {
+        .message {
+          margin-block-start: 12px;
+          margin-block-end: 24px;
+        }
+
+        .sub-message {
+          margin-block-end: 64px;
+        }
+
+        .back-home {
+          width: fit-content;
+        }
       }
     }
   }
