@@ -5,6 +5,7 @@ import { Button } from '../../shared/button/button';
 
 @Component({
   selector: 'app-error-404',
+  standalone: true,
   imports: [Button],
   templateUrl: './error-404.html',
   styleUrl: './error-404.scss',
