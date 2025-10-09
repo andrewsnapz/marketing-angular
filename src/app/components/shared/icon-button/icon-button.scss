@@ -1,14 +1,21 @@
-.icon-button {
-  border: none;
+:host.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
   cursor: pointer;
-
-  &-sm {
-    width: 20px;
-    height: 20px;
-  }
+  border: none;
+  padding: 0;
 }
 
-// .icon-button-sm {
-//   width: 20px;
-//   height: 20px;
-// }
+:host.icon-button-svg-sm {
+  width: fit-content;
+  height: fit-content;
+  padding: 3.41px;
+}
+
+:host.icon-button-svg-2xl {
+  width: fit-content;
+  height: fit-content;
+  padding: 4.7px;
+}

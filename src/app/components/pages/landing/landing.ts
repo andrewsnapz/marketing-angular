@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
-import { Hamburger } from '../../shared/svg/hamburger/hamburger';
-import { IconButton } from '../../shared/icon-button/icon-button';
+import { Header } from '../../layout/header/header';
+import { PageLayout } from '../../layout/page-layout/page-layout';
 
 @Component({
   selector: 'app-landing',
-  imports: [IconButton, Hamburger],
+  imports: [Header, PageLayout],
   templateUrl: './landing.html',
   styleUrl: './landing.scss',
 })

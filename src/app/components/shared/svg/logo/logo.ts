@@ -1,11 +1,11 @@
 import { Component, HostBinding } from '@angular/core';
 
 @Component({
-  selector: 'app-hamburger-svg',
+  selector: 'app-logo-svg',
   standalone: true,
-  templateUrl: '../../../../../../public/hamburger.svg',
+  templateUrl: '../../../../../../public/abstractly.svg',
 })
-export class Hamburger {
+export class Logo {
   @HostBinding('aria-hidden')
   get ariaHidden(): boolean {
     return true;

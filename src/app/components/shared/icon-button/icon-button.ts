@@ -7,11 +7,16 @@ import { Component, HostBinding, input } from '@angular/core';
   styleUrl: './icon-button.scss',
 })
 export class IconButton {
-  size = input<'sm' | 'md' | 'lg' | 'xl' | '2xl'>('md');
-  visuallyHiddenText = input.required();
+  size = input<'sm' | '2xl'>('sm');
+  visuallyHiddenText = input.required<string>();
 
   @HostBinding('class')
-  get buttonClasses(): string {
-    return `icon-button icon-button-${this.size()}`;
+  get iconButtonClasses(): string {
+    return `icon-button icon-button-svg-${this.size()}`;
+  }
+
+  @HostBinding('attr.aria-label')
+  get ariaLabel(): string {
+    return this.visuallyHiddenText();
   }
 }
