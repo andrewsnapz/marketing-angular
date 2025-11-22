@@ -1,7 +1,7 @@
 import { Component, HostBinding, input } from '@angular/core';
 
 @Component({
-  selector: 'button[appIconButton]',
+  selector: 'button[appIconButton], a[appIconLink]',
   standalone: true,
   templateUrl: './icon-button.html',
   styleUrl: './icon-button.scss',

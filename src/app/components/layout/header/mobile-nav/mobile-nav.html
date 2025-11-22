@@ -1,1 +1,13 @@
-<p>mobile-nav works!</p>
+@if (isMobileNavOpen()) {
+<div class="background" (click)="this.onHandleCloseMobileNav()"></div>
+<nav class="mobile-nav" animate.enter="enter-mobile-nav" animate.leave="leave-mobile-nav">
+  <button (click)="this.onHandleCloseMobileNav()">X</button>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Features</a></li>
+    <li><a href="#">Pricing</a></li>
+    <li><a href="#">About us</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+}

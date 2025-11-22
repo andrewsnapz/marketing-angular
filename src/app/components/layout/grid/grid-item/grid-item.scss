@@ -1,3 +1,5 @@
+@use '../../../../../styles-utils/variables/breakpoints' as breakpoint;
+
 // Mobile (default)
 @for $i from 1 through 4 {
   :host.col-mobile-#{$i} {
@@ -6,7 +8,7 @@
 }
 
 // Tablet
-@media (min-width: 768px) {
+@media (min-width: breakpoint.$breakpoint-tablet) {
   @for $i from 1 through 6 {
     :host.col-tablet-#{$i} {
       grid-column: span #{$i};
@@ -15,7 +17,7 @@
 }
 
 // Desktop
-@media (min-width: 1280px) {
+@media (min-width: breakpoint.$breakpoint-desktop) {
   @for $i from 1 through 12 {
     :host.col-desktop-#{$i} {
       grid-column: span #{$i};

@@ -1,8 +1,13 @@
 <header class="header">
-  <nav>
-    <a tabindex="0"><app-logo-svg /></a>
-  </nav>
-  <button class="open-navigation-button" appIconButton visuallyHiddenText="open navigation">
+  <a tabindex="0" aria-label="Abstractly" href="#"><app-logo-svg /></a>
+  <button
+    (click)="this.openMobileNav()"
+    class="open-navigation-button"
+    appIconButton
+    visuallyHiddenText="open navigation"
+  >
     <app-hamburger-svg />
   </button>
 </header>
+
+<app-mobile-nav [isMobileNavOpen]="isMobileNavOpen()" [closeMobileNav]="this.closeMobileView" />
